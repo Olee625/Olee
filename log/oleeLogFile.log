@@ -1341,3 +1341,41 @@ java.lang.NullPointerException: null
 11:24:58.343 [main] INFO  c.o.p.controller.UserController:73- userId为58c61751517049aa8782da474c290cd1,进入到updateUserInfo的controller层
 11:24:58.343 [main] INFO  c.o.p.s.InfoManagementServiceImpl:53- controller层接收到的nickname：null,address：成都市锦江区
 11:24:58.567 [main] INFO  c.o.p.controller.UserControllerTest:119- response:{"code":0,"message":"Success","result":{}}
+14:30:34.765 [main] INFO  c.o.p.controller.UserControllerTest:55- Starting UserControllerTest using Java 1.8.0_161 on DESKTOP-MEMJ3FE with PID 9944 (started by Administrator in D:\JAVA\Revision\olee_project)
+14:30:34.767 [main] INFO  c.o.p.controller.UserControllerTest:659- No active profile set, falling back to default profiles: default
+14:30:37.300 [main] WARN  o.s.b.a.f.FreeMarkerAutoConfiguration:65- Cannot find template location(s): [classpath:/templates/] (please add some templates, check your FreeMarker configuration, or set spring.freemarker.checkTemplateLocation=false)
+14:30:37.400 [main] INFO  c.o.p.controller.UserControllerTest:61- Started UserControllerTest in 2.963 seconds (JVM running for 3.819)
+14:30:38.407 [main] INFO  com.olee.project.utils.ZsetUtil:82- key:userId:userToken:7e445a77470a49d899a7f61d336681ec,通过setExpireOnKey方法设置过期时间是否成功:true
+14:30:38.427 [main] INFO  c.o.p.controller.UserControllerTest:50- response:{"code":0,"message":"Success","result":{"userId":"7e445a77470a49d899a7f61d336681ec","createAt":"2021-08-12T06:30:38Z"}}
+14:35:34.516 [main] INFO  c.o.p.controller.UserControllerTest:55- Starting UserControllerTest using Java 1.8.0_161 on DESKTOP-MEMJ3FE with PID 4716 (started by Administrator in D:\JAVA\Revision\olee_project)
+14:35:34.519 [main] INFO  c.o.p.controller.UserControllerTest:659- No active profile set, falling back to default profiles: default
+14:35:36.904 [main] WARN  o.s.b.a.f.FreeMarkerAutoConfiguration:65- Cannot find template location(s): [classpath:/templates/] (please add some templates, check your FreeMarker configuration, or set spring.freemarker.checkTemplateLocation=false)
+14:35:37.005 [main] INFO  c.o.p.controller.UserControllerTest:61- Started UserControllerTest in 2.811 seconds (JVM running for 3.646)
+14:35:38.022 [main] INFO  c.o.p.controller.UserControllerTest:65- response:{"code":0,"message":"Success","result":{"userId":"7e445a77470a49d899a7f61d336681ec","email":"1037659019@qq.com","nickname":"user","createAt":"2021-08-12T06:30:38Z","updateAt":"2021-08-12T06:30:38Z","token":"8beb73609c07ef7122be0d4ddcd3130c-20210812143537482-746348","expiresIn":86400}}
+14:37:15.162 [main] INFO  c.o.p.controller.UserControllerTest:55- Starting UserControllerTest using Java 1.8.0_161 on DESKTOP-MEMJ3FE with PID 15828 (started by Administrator in D:\JAVA\Revision\olee_project)
+14:37:15.165 [main] INFO  c.o.p.controller.UserControllerTest:659- No active profile set, falling back to default profiles: default
+14:37:17.514 [main] WARN  o.s.b.a.f.FreeMarkerAutoConfiguration:65- Cannot find template location(s): [classpath:/templates/] (please add some templates, check your FreeMarker configuration, or set spring.freemarker.checkTemplateLocation=false)
+14:37:17.611 [main] INFO  c.o.p.controller.UserControllerTest:61- Started UserControllerTest in 2.761 seconds (JVM running for 3.584)
+14:37:18.621 [main] INFO  c.o.p.controller.UserControllerTest:65- response:{"code":0,"message":"Success","result":{"userId":"7e445a77470a49d899a7f61d336681ec","email":"1037659019@qq.com","nickname":"user","createAt":"2021-08-12T06:30:38Z","updateAt":"2021-08-12T06:30:38Z","token":"8beb73609c07ef7122be0d4ddcd3130c-20210812143718092-859653","expiresIn":86400}}
+14:38:17.542 [main] INFO  c.o.p.controller.UserControllerTest:55- Starting UserControllerTest using Java 1.8.0_161 on DESKTOP-MEMJ3FE with PID 18480 (started by Administrator in D:\JAVA\Revision\olee_project)
+14:38:17.545 [main] INFO  c.o.p.controller.UserControllerTest:659- No active profile set, falling back to default profiles: default
+14:38:19.890 [main] WARN  o.s.b.a.f.FreeMarkerAutoConfiguration:65- Cannot find template location(s): [classpath:/templates/] (please add some templates, check your FreeMarker configuration, or set spring.freemarker.checkTemplateLocation=false)
+14:38:20.009 [main] INFO  c.o.p.controller.UserControllerTest:61- Started UserControllerTest in 2.794 seconds (JVM running for 3.623)
+14:38:20.247 [main] INFO  c.o.p.i.AuthorizationInterceptor:58- 拿到的userId：7e445a77470a49d899a7f61d336681ec，拿到的token值：8beb73609c07ef7122be0d4ddcd3130c-20210812143718092-859653
+14:38:20.794 [main] INFO  c.o.p.controller.UserController:73- userId为7e445a77470a49d899a7f61d336681ec,进入到updateUserInfo的controller层
+14:38:20.794 [main] INFO  c.o.p.s.InfoManagementServiceImpl:53- controller层接收到的nickname：null,address：成都市锦江区
+14:38:21.014 [main] INFO  c.o.p.controller.UserControllerTest:119- response:{"code":0,"message":"Success","result":{}}
+14:40:19.836 [main] INFO  c.o.p.controller.UserControllerTest:55- Starting UserControllerTest using Java 1.8.0_161 on DESKTOP-MEMJ3FE with PID 15648 (started by Administrator in D:\JAVA\Revision\olee_project)
+14:40:19.838 [main] INFO  c.o.p.controller.UserControllerTest:659- No active profile set, falling back to default profiles: default
+14:40:22.218 [main] WARN  o.s.b.a.f.FreeMarkerAutoConfiguration:65- Cannot find template location(s): [classpath:/templates/] (please add some templates, check your FreeMarker configuration, or set spring.freemarker.checkTemplateLocation=false)
+14:40:22.315 [main] INFO  c.o.p.controller.UserControllerTest:61- Started UserControllerTest in 2.799 seconds (JVM running for 3.635)
+14:40:22.528 [main] INFO  c.o.p.i.AuthorizationInterceptor:58- 拿到的userId：7e445a77470a49d899a7f61d336681ec，拿到的token值：8beb73609c07ef7122be0d4ddcd3130c-20210812143718092-859653
+14:40:23.050 [main] INFO  c.o.p.controller.UserController:62- userId为7e445a77470a49d899a7f61d336681ec,进入到getUserInfo的controller层
+14:40:23.283 [main] INFO  c.o.p.controller.UserControllerTest:96- response:{"code":0,"message":"Success","result":{"userId":"7e445a77470a49d899a7f61d336681ec","email":"1037659019@qq.com","nickname":"user","address":"成都市锦江区","createAt":"2021-08-12T06:30:38","updateAt":"2021-08-12T06:38:21"}}
+14:41:58.237 [main] INFO  c.o.p.controller.UserControllerTest:55- Starting UserControllerTest using Java 1.8.0_161 on DESKTOP-MEMJ3FE with PID 20176 (started by Administrator in D:\JAVA\Revision\olee_project)
+14:41:58.239 [main] INFO  c.o.p.controller.UserControllerTest:659- No active profile set, falling back to default profiles: default
+14:42:00.614 [main] WARN  o.s.b.a.f.FreeMarkerAutoConfiguration:65- Cannot find template location(s): [classpath:/templates/] (please add some templates, check your FreeMarker configuration, or set spring.freemarker.checkTemplateLocation=false)
+14:42:00.715 [main] INFO  c.o.p.controller.UserControllerTest:61- Started UserControllerTest in 2.8 seconds (JVM running for 3.638)
+14:42:00.919 [main] INFO  c.o.p.i.AuthorizationInterceptor:58- 拿到的userId：7e445a77470a49d899a7f61d336681ec，拿到的token值：8beb73609c07ef7122be0d4ddcd3130c-20210812143718092-859653
+14:42:01.450 [main] INFO  c.o.p.controller.UserController:62- userId为7e445a77470a49d899a7f61d336681ec,进入到getUserInfo的controller层
+14:42:01.677 [main] INFO  c.o.p.controller.UserControllerTest:96- response:{"code":0,"message":"Success","result":{"userId":"7e445a77470a49d899a7f61d336681ec","email":"1037659019@qq.com","nickname":"user","address":"成都市锦江区","createAt":"2021-08-12T06:30:38Z","updateAt":"2021-08-12T06:38:21Z"}}

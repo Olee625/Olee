@@ -62,11 +62,11 @@ public class RegisterLoginServiceImpl implements RegisterLoginService {
         user.setUserId(userId);
         //创建时间
         LocalDateTime time = LocalDateTime.now(ZoneOffset.UTC);
-        user.setCreateAt(time.format(sdf));
+        user.setCreateAt(time);
         user.setPassword(DigestUtils.md5DigestAsHex(user.getPassword().getBytes()));
         //默认值在java中生成
         user.setNickname("user");
-        user.setUpdateAt(time.format(sdf));
+        user.setUpdateAt(time);
         userMapper.insert(user);
         RegisterRespDto registerResDto = new RegisterRespDto();
         registerResDto.setUserId(userId);
@@ -97,8 +97,8 @@ public class RegisterLoginServiceImpl implements RegisterLoginService {
                 findUser.getEmail(),
                 findUser.getNickname(),
                 findUser.getAddress(),
-                findUser.getCreateAt().toString(),
-                findUser.getUpdateAt().toString(),
+                findUser.getCreateAt().format(sdf),
+                findUser.getUpdateAt().format(sdf),
                 token,
                 expireOnValueIntegerSeconds);
         return Response.success(userDto);

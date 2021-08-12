@@ -41,8 +41,8 @@ public class InfoManagementServiceImpl implements InfoManagementService {
                 user.getEmail(),
                 user.getNickname(),
                 user.getAddress(),
-                user.getCreateAt().toString(),
-                user.getUpdateAt().toString());
+                user.getCreateAt().format(sdf),
+                user.getUpdateAt().format(sdf));
         return Response.success(userDto);
     }
 
@@ -63,7 +63,7 @@ public class InfoManagementServiceImpl implements InfoManagementService {
         user.setAddress(requestUser.getAddress());
         //更新时间
         LocalDateTime time = LocalDateTime.now(ZoneOffset.UTC);
-        user.setUpdateAt(time.format(sdf));
+        user.setUpdateAt(time);
         userMapper.updateNicknameAndAddress(user);
         return Response.success(new JsonObject());
     }
@@ -92,7 +92,7 @@ public class InfoManagementServiceImpl implements InfoManagementService {
         user.setPassword(userNewPassword);
         //更新更新时间
         LocalDateTime time = LocalDateTime.now(ZoneOffset.UTC);
-        user.setUpdateAt(time.format(sdf));
+        user.setUpdateAt(time);
         userMapper.updatePassword(user);
         tokenManagementService.deleteAllTokens(userId);
         return Response.success(new JsonObject());

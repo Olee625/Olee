@@ -2,6 +2,8 @@ package com.olee.project.model;
 
 import lombok.Data;
 
+import java.time.LocalDateTime;
+
 
 @Data
 public class User {
@@ -13,8 +15,8 @@ public class User {
     private String nickname;
     private String address;
     //todo 时间类型
-    private String createAt;
-    private String updateAt;
+    private LocalDateTime createAt;
+    private LocalDateTime updateAt;
 
 
 }

@@ -84,7 +84,7 @@ public class UserControllerTest {
     public void getUserInfoTest() throws Exception {
         RequestBuilder request;
         //考虑token是否过期，登录新建一个token
-        String Authorization = "58c61751517049aa8782da474c290cd1 8beb73609c07ef7122be0d4ddcd3130c-20210812111032179-721302";
+        String Authorization = "7e445a77470a49d899a7f61d336681ec 8beb73609c07ef7122be0d4ddcd3130c-20210812143718092-859653";
         String errorAuthorization = "123 45678";
         String errorAuthorization1 = "cc8dd5a058404a8f92aeeb88561f52578beb73609c07ef7122be0d4ddcd3130c-20210811092512748-260818";
         request = post("/api/v1/user/getUserInfo")
@@ -102,7 +102,7 @@ public class UserControllerTest {
     @Test
     public void updateUserInfoTest() throws Exception {
 
-        String Authorization = "58c61751517049aa8782da474c290cd1 8beb73609c07ef7122be0d4ddcd3130c-20210812111032179-721302";
+        String Authorization = "7e445a77470a49d899a7f61d336681ec 8beb73609c07ef7122be0d4ddcd3130c-20210812143718092-859653";
         String requestBody = "{\"nickname\":\"Olee\",\"address\":\"重庆市江北区\"}";
         String requestBody1 = "{\"address\":\"成都市锦江区\"}";
         String requestBody2 = "{\"nickname\":\"Olee\"}";
