@@ -1,0 +1,125 @@
+C:\Program Files\MySQL\MySQL Server 5.7\bin\mysqld.exe, Version: 5.7.34-log (MySQL Community Server (GPL)). started with:
+TCP Port: 3306, Named Pipe: (null)
+Time                 Id Command    Argument
+C:\Program Files\MySQL\MySQL Server 5.7\bin\mysqld.exe, Version: 5.7.34-log (MySQL Community Server (GPL)). started with:
+TCP Port: 3306, Named Pipe: (null)
+Time                 Id Command    Argument
+C:\Program Files\MySQL\MySQL Server 5.7\bin\mysqld.exe, Version: 5.7.34-log (MySQL Community Server (GPL)). started with:
+TCP Port: 3306, Named Pipe: (null)
+Time                 Id Command    Argument
+C:\Program Files\MySQL\MySQL Server 5.7\bin\mysqld.exe, Version: 5.7.34-log (MySQL Community Server (GPL)). started with:
+TCP Port: 3306, Named Pipe: (null)
+Time                 Id Command    Argument
+C:\Program Files\MySQL\MySQL Server 5.7\bin\mysqld.exe, Version: 5.7.34-log (MySQL Community Server (GPL)). started with:
+TCP Port: 3306, Named Pipe: (null)
+Time                 Id Command    Argument
+C:\Program Files\MySQL\MySQL Server 5.7\bin\mysqld.exe, Version: 5.7.34-log (MySQL Community Server (GPL)). started with:
+TCP Port: 3306, Named Pipe: (null)
+Time                 Id Command    Argument
+# Time: 2021-08-16T03:35:28.634372Z
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:    90
+# Query_time: 0.000130  Lock_time: 0.000000 Rows_sent: 0  Rows_examined: 0
+use training_2021;
+SET timestamp=1629084928;
+set long_query_time=0;
+# Time: 2021-08-16T03:35:32.986154Z
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:    90
+# Query_time: 0.000043  Lock_time: 0.000000 Rows_sent: 0  Rows_examined: 0
+SET timestamp=1629084932;
+# administrator command: Ping;
+# Time: 2021-08-16T03:35:32.988642Z
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:    90
+# Query_time: 0.001581  Lock_time: 0.000111 Rows_sent: 15  Rows_examined: 1038
+SET timestamp=1629084932;
+show variables like '%quer%';
+# Time: 2021-08-16T03:35:39.855893Z
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:    90
+# Query_time: 0.000043  Lock_time: 0.000000 Rows_sent: 15  Rows_examined: 1038
+SET timestamp=1629084939;
+# administrator command: Ping;
+# Time: 2021-08-16T03:35:39.857580Z
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:    90
+# Query_time: 0.000214  Lock_time: 0.000117 Rows_sent: 1  Rows_examined: 1
+SET timestamp=1629084939;
+SELECT * FROM training_2021.olee_user
+LIMIT 0, 1000;
+# Time: 2021-08-16T03:35:46.104707Z
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:    90
+# Query_time: 0.000032  Lock_time: 0.000000 Rows_sent: 1  Rows_examined: 1
+SET timestamp=1629084946;
+# administrator command: Ping;
+# Time: 2021-08-16T03:35:46.105123Z
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:    90
+# Query_time: 0.000252  Lock_time: 0.000137 Rows_sent: 4  Rows_examined: 4
+SET timestamp=1629084946;
+SHOW FULL COLUMNS FROM `sys`.`sys_config`;
+# Time: 2021-08-16T03:35:46.106034Z
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:    90
+# Query_time: 0.000789  Lock_time: 0.000117 Rows_sent: 12  Rows_examined: 12
+SET timestamp=1629084946;
+SHOW FULL COLUMNS FROM `sys`.`host_summary`;
+# Time: 2021-08-16T03:35:46.106500Z
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:    90
+# Query_time: 0.000335  Lock_time: 0.000120 Rows_sent: 3  Rows_examined: 3
+SET timestamp=1629084946;
+SHOW FULL COLUMNS FROM `sys`.`host_summary_by_file_io`;
+# Time: 2021-08-16T03:35:46.106973Z
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:    90
+# Query_time: 0.000351  Lock_time: 0.000121 Rows_sent: 5  Rows_examined: 5
+SET timestamp=1629084946;
+SHOW FULL COLUMNS FROM `sys`.`host_summary_by_file_io_type`;
+# Time: 2021-08-16T03:35:46.107435Z
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:    90
+# Query_time: 0.000339  Lock_time: 0.000116 Rows_sent: 5  Rows_examined: 5
+SET timestamp=1629084946;
+SHOW FULL COLUMNS FROM `sys`.`host_summary_by_stages`;
+# Time: 2021-08-16T03:35:46.107947Z
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:    90
+# Query_time: 0.000390  Lock_time: 0.000116 Rows_sent: 9  Rows_examined: 9
+SET timestamp=1629084946;
+SHOW FULL COLUMNS FROM `sys`.`host_summary_by_statement_latency`;
+# Time: 2021-08-16T03:35:46.108456Z
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:    90
+# Query_time: 0.000383  Lock_time: 0.000117 Rows_sent: 10  Rows_examined: 10
+SET timestamp=1629084946;
+SHOW FULL COLUMNS FROM `sys`.`host_summary_by_statement_type`;
+# Time: 2021-08-16T03:35:46.108983Z
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:    90
+# Query_time: 0.000399  Lock_time: 0.000118 Rows_sent: 7  Rows_examined: 7
+SET timestamp=1629084946;
+SHOW FULL COLUMNS FROM `sys`.`innodb_buffer_stats_by_schema`;
+# Time: 2021-08-16T03:35:46.109510Z
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:    90
+# Query_time: 0.000398  Lock_time: 0.000118 Rows_sent: 8  Rows_examined: 8
+SET timestamp=1629084946;
+SHOW FULL COLUMNS FROM `sys`.`innodb_buffer_stats_by_table`;
+# Time: 2021-08-16T03:35:46.110189Z
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:    90
+# Query_time: 0.000553  Lock_time: 0.000136 Rows_sent: 26  Rows_examined: 26
+SET timestamp=1629084946;
+SHOW FULL COLUMNS FROM `sys`.`innodb_lock_waits`;
+# Time: 2021-08-16T03:35:46.110736Z
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:    90
+# Query_time: 0.000401  Lock_time: 0.000118 Rows_sent: 8  Rows_examined: 8
+SET timestamp=1629084946;
+SHOW FULL COLUMNS FROM `sys`.`io_by_thread_by_latency`;
+# Time: 2021-08-16T03:35:46.111249Z
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:    90
+# Query_time: 0.000390  Lock_time: 0.000117 Rows_sent: 9  Rows_examined: 9
+SET timestamp=1629084946;
+SHOW FULL COLUMNS FROM `sys`.`io_global_by_file_by_bytes`;
+# Time: 2021-08-16T03:35:46.111736Z
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:    90
+# Query_time: 0.000361  Lock_time: 0.000116 Rows_sent: 9  Rows_examined: 9
+SET timestamp=1629084946;
+SHOW FULL COLUMNS FROM `sys`.`io_global_by_file_by_latency`;
+# Time: 2021-08-16T03:35:46.112261Z
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:    90
+# Query_time: 0.000406  Lock_time: 0.000115 Rows_sent: 13  Rows_examined: 13
+SET timestamp=1629084946;
+SHOW FULL COLUMNS FROM `sys`.`io_global_by_wait_by_bytes`;
+# Time: 2021-08-16T03:35:46.112823Z
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:    90
+# Query_time: 0.000433  Lock_time: 0.000116 Rows_sent: 14  Rows_examined: 14
+SET timestamp=1629084946;
+SHOW FULL COLUMNS FROM `sys`.`io_global_by_wait_by_latency`;
