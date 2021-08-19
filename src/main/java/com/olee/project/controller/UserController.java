@@ -29,10 +29,8 @@ public class UserController {
     public UserController(RegisterLoginService registerLoginService, InfoManagementService infoManagementService) {
         this.registerLoginService = registerLoginService;
         this.infoManagementService = infoManagementService;
-
     }
-
-
+    
     @PostMapping("/register")
     public Response<RegisterRespDto> register(@RequestBody User user) {
         //参数校验，邮箱和密码合法性，再对邮箱是否注册做判断，最后注册新用户，写入数据库

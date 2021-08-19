@@ -23,7 +23,7 @@ import java.time.format.DateTimeFormatter;
 public class InfoManagementServiceImpl implements InfoManagementService {
     private final UserMapper userMapper;
     private final TokenManagementService tokenManagementService;
-    private final DateTimeFormatter sdf = DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm:ss'Z'");
+    private final DateTimeFormatter sdf = DateTimeFormatter.ISO_DATE_TIME;
 
     @Autowired
     public InfoManagementServiceImpl(UserMapper userMapper, TokenManagementService tokenManagementService) {

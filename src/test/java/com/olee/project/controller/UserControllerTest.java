@@ -2,6 +2,7 @@ package com.olee.project.controller;
 
 
 import com.google.gson.Gson;
+import com.google.gson.JsonObject;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.Assert;
 import org.junit.Before;
@@ -41,13 +42,15 @@ public class UserControllerTest {
         RequestBuilder request;
         String requestBody = "{\"email\":\"1037659019@qq.com\",\"password\":\"123456olee\"}";
         String requestBody1 = "{\"email\":\"15862717625@qq.com\",\"password\":\"123456olee\"}";
-        request = post("/api/v1/user/register")
+        request = post("http://192.168.104.247:8008/api/v1/user/register")
                 .contentType(MediaType.APPLICATION_JSON)
                 .content(requestBody);
         String responseString = mvc.perform(request)
                 //.andDo(print())
                 .andReturn().getResponse().getContentAsString();
         log.info("response:" + responseString);
+        JsonObject respJson = gson.fromJson(responseString, JsonObject.class);
+        Assert.assertThat(respJson.get("message").getAsString(), is("Success"));
 
 
     }
@@ -63,6 +66,9 @@ public class UserControllerTest {
         String responseString = mvc.perform(request)
                 .andReturn().getResponse().getContentAsString();
         log.info("response:" + responseString);
+        //断言
+        JsonObject respJson = gson.fromJson(responseString, JsonObject.class);
+        Assert.assertThat(respJson.get("message").getAsString(), is("Success"));
     }
 
     @Test
@@ -84,25 +90,24 @@ public class UserControllerTest {
     public void getUserInfoTest() throws Exception {
         RequestBuilder request;
         //考虑token是否过期，登录新建一个token
-        String Authorization = "7e445a77470a49d899a7f61d336681ec 8beb73609c07ef7122be0d4ddcd3130c-20210812143718092-859653";
+        String Authorization = "7e445a77470a49d899a7f61d336681ec 8beb73609c07ef7122be0d4ddcd3130c-20210812175311874-954217";
         String errorAuthorization = "123 45678";
         String errorAuthorization1 = "cc8dd5a058404a8f92aeeb88561f52578beb73609c07ef7122be0d4ddcd3130c-20210811092512748-260818";
         request = post("/api/v1/user/getUserInfo")
                 .contentType(MediaType.APPLICATION_JSON)
                 .header("X-Authorization", Authorization);
-
         String responseString = mvc.perform(request)
                 .andReturn().getResponse().getContentAsString();
         log.info("response:" + responseString);
-        String expectedResponse = "{\"code\":0,\"message\":\"Success\",\"result\":{\"userId\":\"58c61751517049aa8782da474c290cd1\",\"email\":\"1037659019@qq.com\",\"nickname\":\"user\",\"createAt\":\"2021-08-12T03:08:05Z\",\"updateAt\":\"2021-08-12T03:08:05Z\"}}";
-        Assert.assertThat(responseString, is(expectedResponse));
-
+        //断言
+        JsonObject respJson = gson.fromJson(responseString, JsonObject.class);
+        Assert.assertThat(respJson.get("message").getAsString(), is("Success"));
     }
 
     @Test
     public void updateUserInfoTest() throws Exception {
 
-        String Authorization = "7e445a77470a49d899a7f61d336681ec 8beb73609c07ef7122be0d4ddcd3130c-20210812143718092-859653";
+        String Authorization = "7e445a77470a49d899a7f61d336681ec 8beb73609c07ef7122be0d4ddcd3130c-20210812175311874-954217";
         String requestBody = "{\"nickname\":\"Olee\",\"address\":\"重庆市江北区\"}";
         String requestBody1 = "{\"address\":\"成都市锦江区\"}";
         String requestBody2 = "{\"nickname\":\"Olee\"}";
@@ -117,10 +122,11 @@ public class UserControllerTest {
         String responseString1 = mvc.perform(request1)
                 .andReturn().getResponse().getContentAsString();
         log.info("response:" + responseString1);
-        String expectedResponse1 = "{\"code\":0,\"message\":\"Success\",\"result\":{}}";
-        Assert.assertThat(responseString1, is(expectedResponse1));
-/*
-        //-20201：用户凭证已失效（过期、登出）-20201：用户凭证已失效（过期、登出）_______________________________________
+        //断言
+        JsonObject respJson1 = gson.fromJson(responseString1, JsonObject.class);
+        Assert.assertThat(respJson1.get("message").getAsString(), is("Success"));
+
+        //-20201：用户凭证已失效（过期、登出）-20201：用户凭证已失效（过期、登出）_________________________________________________
         String errorAuthorization = "123 45678";
         RequestBuilder request2;
         request2 = post("/api/v1/user/updateUserInfo")
@@ -130,8 +136,9 @@ public class UserControllerTest {
         String responseString2 = mvc.perform(request2)
                 .andReturn().getResponse().getContentAsString();
         log.info("response:" + responseString2);
-        String expectedResponse2 = "{\"code\":-20201,\"message\":\"User‘s token have expired\",\"result\":{}}";
-        Assert.assertThat(responseString2, is(expectedResponse2));
+        //断言
+        JsonObject respJson2 = gson.fromJson(responseString2, JsonObject.class);
+        Assert.assertThat(respJson2.get("message").getAsString(), is("User‘s token have expired"));
 
         //-20103：昵称不合法____________________________________________________________________________________
         String errorRequestBody1 = "{\"nickname\":\"111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111\",\"address\":\"重庆市江北区\"}";
@@ -143,8 +150,9 @@ public class UserControllerTest {
         String responseString3 = mvc.perform(request3)
                 .andReturn().getResponse().getContentAsString();
         log.info("response:" + responseString3);
-        String expectedResponse3 = "{\"code\":-20103,\"message\":\"Invalid nickname\",\"result\":{}}";
-        Assert.assertThat(responseString3, is(expectedResponse3));
+        //断言
+        JsonObject respJson3 = gson.fromJson(responseString3, JsonObject.class);
+        Assert.assertThat(respJson3.get("message").getAsString(), is("Invalid nickname"));
 
         //-20103：地址不合法____________________________________________________________________________________
         String errorRequestBody2 = "{\"nickname\":\"Olee\",\"address\":\"钱钱钱钱钱钱钱钱钱钱钱钱钱钱钱钱钱钱钱钱钱钱钱钱钱钱钱钱钱钱钱钱钱钱钱钱去请求钱钱钱钱钱钱钱钱钱钱钱钱钱钱钱钱钱钱钱去请求去去请求去去钱钱钱钱钱钱钱钱钱钱钱钱钱钱钱钱钱钱钱钱钱钱钱钱钱钱钱钱钱钱钱钱钱钱钱钱去钱钱钱钱钱钱钱钱钱钱钱钱钱钱钱钱钱钱钱钱钱钱钱钱钱钱钱钱钱钱钱钱钱钱钱钱去钱钱钱钱钱钱钱钱钱钱钱钱钱钱钱钱钱钱钱钱钱钱钱钱钱钱钱钱钱钱钱钱钱钱钱钱去钱钱钱钱钱钱钱钱钱钱钱钱钱钱钱钱钱钱钱钱钱钱钱钱钱钱钱钱钱钱钱钱钱钱钱钱去钱钱钱钱钱钱钱钱钱钱钱钱钱钱钱钱钱钱钱钱钱钱钱钱钱钱钱钱钱钱钱钱钱钱钱钱钱钱钱钱钱\"}";
@@ -156,10 +164,10 @@ public class UserControllerTest {
         String responseString4 = mvc.perform(request4)
                 .andReturn().getResponse().getContentAsString();
         log.info("response:" + responseString4);
-        String expectedResponse4 = "{\"code\":-20104,\"message\":\"Invalid address\",\"result\":{}}";
-        Assert.assertThat(responseString4, is(expectedResponse4));
+        //断言
+        JsonObject respJson4 = gson.fromJson(responseString4, JsonObject.class);
+        Assert.assertThat(respJson4.get("message").getAsString(), is("Invalid address"));
 
-*/
     }
 
     @Test
@@ -184,18 +192,7 @@ public class UserControllerTest {
         String responseString = mvc.perform(request)
                 .andReturn().getResponse().getContentAsString();
         log.info("response:" + responseString);
-        String expectedResponse = "{\n" +
-                "  \"code\": 0,\n" +
-                "  \"message\": \"Success\",\n" +
-                "  \"result\": {\n" +
-                "    \"userId\": \"2105ae04227c415ba15c8a8af03428eb\",\n" +
-                "    \"email\": \"15862717625@qq.com\",\n" +
-                "    \"nickname\": \"Jay\",\n" +
-                "    \"address\": \"重庆市江北区\",\n" +
-                "    \"createAt\": \"2021-08-04T14:49:23+0800\",\n" +
-                "    \"updateAt\": \"2021-08-04T14:49:24+0800\"\n" +
-                "  }\n" +
-                "}";
+        String expectedResponse = "";
         Assert.assertThat(responseString, is(expectedResponse));
 
 
